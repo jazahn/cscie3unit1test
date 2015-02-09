@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Test for Project Unit 1</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.2.0/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.2.0/jasmine.css">
+
+  <script src="lib/jasmine-2.2.0/jasmine.js"></script>
+  <script src="lib/jasmine-2.2.0/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.2.0/boot.js"></script>
+  <script src="lib/jquery-2.1.3.min.js"></script>
+  <script src="lib/jasmine-jquery.js"></script>
+
+  <!-- include source files here... -->
+
+  <!-- include spec files here... -->
+  <script>
+    $(document).ready(function(){
+      $.get( "../cscie3ProjectUnit1/PartA/project1.html", function( data ) {
+        $( "#include-content" ).html( data );
+        alert( "Load was performed." );
+        // css
+        $("<link/>", {
+          rel: "stylesheet",
+          type: "text/css",
+          href: "../cscie3ProjectUnit1/PartA/css/cscie3.css"
+        }).appendTo("head");
+        // js
+        $.getScript("../cscie3ProjectUnit1/PartA/js/project1.js", function(){
+
+          alert("Script loaded and executed.");
+
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+<div id="include-content"></div>
+</body>
+</html>
