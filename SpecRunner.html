@@ -14,28 +14,37 @@
   <script src="lib/jasmine-jquery.js"></script>
 
   <!-- include source files here... -->
-
-  <!-- include spec files here... -->
   <script>
+    /*
     $(document).ready(function(){
       $.get( "../cscie3ProjectUnit1/PartA/project1.html", function( data ) {
         $( "#include-content" ).html( data );
-        alert( "Load was performed." );
+
         // css
         $("<link/>", {
           rel: "stylesheet",
           type: "text/css",
           href: "../cscie3ProjectUnit1/PartA/css/cscie3.css"
         }).appendTo("head");
+
         // js
         $.getScript("../cscie3ProjectUnit1/PartA/js/project1.js", function(){
 
-          alert("Script loaded and executed.");
+          // include spec files here
+          $.getScript("spec/partAspec.js");
 
         });
+
       });
     });
+    */
   </script>
+  <!--
+  <script src="../cscie3ProjectUnit1/PartA/js/project1.js"></script>
+  -->
+  <script src="spec/partAspec.js"></script>
+
+
 </head>
 
 <body>
